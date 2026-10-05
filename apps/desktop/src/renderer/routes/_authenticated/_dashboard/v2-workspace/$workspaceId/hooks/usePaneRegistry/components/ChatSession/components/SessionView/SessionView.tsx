@@ -19,7 +19,10 @@ import { Spinner } from "@superset/ui/spinner";
 import type { ReactNode } from "react";
 import { useCallback, useEffect, useMemo, useRef } from "react";
 import type { OpenFile } from "../../../../../../types";
-import { ChatPaneActionsProvider } from "../../providers/ChatPaneActionsProvider";
+import {
+	ChatPaneActionsProvider,
+	type OpenPage,
+} from "../../providers/ChatPaneActionsProvider";
 import type { ChatForkTarget } from "../../types";
 import { buildChatHandoffTranscript } from "../../utils/chatHandoffTranscript";
 import { railMessages } from "../../utils/railMessages";
@@ -42,6 +45,7 @@ export function SessionView({
 	onFork,
 	onSessionState,
 	openFile,
+	openPage,
 	sessionId,
 	workspaceId,
 }: {
@@ -62,6 +66,7 @@ export function SessionView({
 	/** Names the speaker in a handed-over transcript. */
 	agentLabel?: string;
 	openFile?: OpenFile;
+	openPage?: OpenPage;
 }) {
 	const session = useChatSession({ client });
 	const timeline = useTimeline(session.snapshot);
@@ -180,7 +185,7 @@ export function SessionView({
 	// w-full because the pane lays its children out in a row: without it this
 	// sizes to its content and leaves the right of the pane empty.
 	return (
-		<ChatPaneActionsProvider openFile={openFile}>
+		<ChatPaneActionsProvider openFile={openFile} openPage={openPage}>
 			<div className="flex h-full min-h-0 w-full min-w-0 flex-col">
 				{/* Only worth a row when it carries a control: the pane header above
 				    already names the agent, and harness/status/connection repeated

@@ -11,6 +11,7 @@ import { AcpChatPane } from "./components/AcpChatPane";
 import { AcpChatPending } from "./components/AcpChatPane/components/AcpChatPending";
 import { useAgentSurface } from "./hooks/useAgentSurface";
 import { useAgentSurfaceSwitch } from "./hooks/useAgentSurfaceSwitch";
+import { useOpenChatPage } from "./hooks/useOpenChatPage";
 
 /**
  * A terminal pane, shown on whichever surface its agent calls for. The choice
@@ -31,6 +32,7 @@ export function AgentTerminalPane({
 	const data = ctx.pane.data as TerminalPaneData;
 	const { agent, surface } = useAgentSurface(workspaceId, data);
 	const { switchSurface } = useAgentSurfaceSwitch(workspaceId);
+	const openPage = useOpenChatPage(ctx.store);
 
 	// A pane that derives onto the chat has recorded nothing: the agent identity
 	// the chat resumes from is not in its data, and the pty it is replacing is
@@ -99,6 +101,7 @@ export function AgentTerminalPane({
 					ctx.actions.updateData({ ...data, acpSessionId })
 				}
 				onOpenFile={onOpenFile}
+				onOpenPage={openPage}
 				sessionId={data.acpSessionId ?? null}
 				workspaceId={workspaceId}
 			/>
