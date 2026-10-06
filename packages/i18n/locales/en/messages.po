@@ -90,9 +90,6 @@ msgstr "(disabled)"
 msgid "(edited)"
 msgstr "(edited)"
 
-msgid "(external)"
-msgstr "(external)"
-
 msgid "(no output)"
 msgstr "(no output)"
 
@@ -6577,9 +6574,6 @@ msgstr "Extended thinking: {activeLabel}"
 msgid "external"
 msgstr "external"
 
-msgid "External"
-msgstr "External"
-
 msgid "External Application"
 msgstr "External Application"
 
@@ -8444,9 +8438,6 @@ msgstr "Interested in bringing Superset to your organization? Reach out and we'l
 
 msgid "Interface"
 msgstr "Interface"
-
-msgid "Internal"
-msgstr "Internal"
 
 msgid "Internet Disconnected"
 msgstr "Internet Disconnected"
@@ -11406,9 +11397,6 @@ msgstr "Open System Settings"
 
 msgid "Open task {title}"
 msgstr "Open task {title}"
-
-msgid "Open task externally"
-msgstr "Open task externally"
 
 msgid "Open Terminal"
 msgstr "Open Terminal"
