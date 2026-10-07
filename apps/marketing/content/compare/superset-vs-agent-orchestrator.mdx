@@ -33,6 +33,8 @@ Superset and [Orchestrator](https://orchestrator.inc/) (formerly Agent Orchestra
 
 Orchestrator's project-level agent can turn a larger goal into worker tasks, pass context to each worker, and follow their progress. The board groups work by activity and PR state so the operator can see what needs attention. Supported sessions can switch between structured Chat and the agent's native terminal interface while keeping the same worktree. Orchestrator supports Claude Code, Codex, Cursor, OpenCode, and a broader [agent catalog](https://docs.orchestrator.inc/plugins/agents/).
 
+Projects can also group a repository with its direct child repositories. With [opt-in issue intake](https://docs.orchestrator.inc/configuration/projects/), GitHub or GitLab issues can start worker sessions.
+
 The [PR feedback loop](https://docs.orchestrator.inc/configuration/lifecycle-automation/) observes GitHub and GitLab checks and reviews. When the relevant rule is enabled, it can send actionable CI failures, requested changes, and merge conflicts back to the owning worker. The desktop also has a Files view for workspace and PR changes, file editing, a Reviews view for agent review runs, and a [session browser](https://docs.orchestrator.inc/dashboard/) that the agent can inspect and control.
 
 Orchestrator includes a current [CLI](https://docs.orchestrator.inc/cli/) for creating and steering sessions. [Recurring automations](https://docs.orchestrator.inc/configuration/lifecycle-automation/) can start sessions from a saved prompt on a cron or RRULE schedule, and project Cues save instructions or commands for reuse. These are separate from PR feedback rules.
