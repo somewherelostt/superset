@@ -46,7 +46,7 @@ For the direct comparison, see [Superset vs Gas Town](/compare/superset-vs-gasto
 
 ### Orchestrator
 
-Orchestrator (formerly Agent Orchestrator, Apache-2.0) combines a project planning agent, worktree workers, and CI and review feedback that can return to the worker responsible for a PR. Its desktop app includes file review, a CLI, recurring automations, and paired iOS and Android apps.
+Orchestrator (formerly Agent Orchestrator, Apache-2.0) combines a project planning agent, worktree workers, and PR feedback that returns CI failures, review comments, and merge conflicts to the responsible worker. Its cross-platform desktop app also has file review, recurring automations, and paired iOS and Android apps.
 
 See [Superset vs Orchestrator](/compare/superset-vs-agent-orchestrator).
 
@@ -78,13 +78,13 @@ See [Superset vs Symphony](/compare/superset-vs-symphony).
 
 ## Verdict
 
-Gas Town is the boldest autonomy experiment in the category and its ideas -- the work ledger, the merge queue -- will outlive any single tool. But its own author frames the operator bar and costs honestly. For teams comparing desktop workflows, Superset offers connected hosts and team controls, while Orchestrator combines a project planning agent with worker-owned PR feedback under Apache-2.0. For the full landscape, see [Best Agentic IDE in 2026](/compare/best-agentic-ide).
+Gas Town is the boldest autonomy experiment in the category and its ideas -- the work ledger, the merge queue -- will outlive any single tool. But its own author frames the operator bar and costs honestly. For most engineers and teams that want many agents shipping real work, Superset is the strongest alternative, with Orchestrator as the open-source pick for automated feedback loops. For the full landscape, see [Best Agentic IDE in 2026](/compare/best-agentic-ide).
 
 ## Frequently Asked Questions
 
 ### What is the best Gas Town alternative?
 
-Superset is a candidate for parallel agents with connected hosts, review, and team workflows. Orchestrator is an Apache-2.0 choice for project planning, reviewer agents, and automated PR feedback.
+For most teams, Superset: fleet-scale parallel agents in worktrees with visibility, review, automations, and multi-device reach, without operating a daemon stack. Orchestrator is the closest open-source alternative for automated PR feedback loops.
 
 ### Is there a Gas Town alternative with a GUI?
 
@@ -96,4 +96,4 @@ All of them except Symphony (Codex-only). Gas Town itself also ships presets for
 
 ### Can any alternative match Gas Town's merge queue?
 
-Gas Town's bisecting Refinery is its distinctive merge queue for landing verified batches.
+Not directly. Orchestrator routes CI failures and review feedback to the owning worker; Superset routes work through normal PR review. Gas Town's bisecting Refinery remains unique -- and remains the part that demands the most trust.
